@@ -31,11 +31,15 @@ const LapTimer = () => {
   };
 
   const startTimer = () => {
-    setIsRunning(true);
+    if (!isRunning) {
+      setIsRunning(true);
+    }
   };
 
   const stopTimer = () => {
-    setIsRunning(false);
+    if (isRunning) {
+      setIsRunning(false);
+    }
   };
 
   const resetTimer = () => {
@@ -44,7 +48,9 @@ const LapTimer = () => {
   };
 
   const recordLap = () => {
-    setLaps((prevLaps) => [...prevLaps, timer]);
+    if (isRunning) {
+      setLaps((prevLaps) => [...prevLaps, timer]);
+    }
   };
 
   return (
