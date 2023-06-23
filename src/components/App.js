@@ -1,14 +1,13 @@
 import React from "react";
-import LapTimer from "./LapTimer";
-
-import "../styles/App.css"
+import './../styles/App.css';
+import LapTimer from "./Laptimer";
 
 const App = () => {
   return (
-    <div className="app">
-      <LapTimer />
+    <div>
+        <LapTimer/>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
